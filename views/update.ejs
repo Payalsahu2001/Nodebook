@@ -1,0 +1,75 @@
+<%- include("./partials/header")%>
+<!--  -->
+
+<form
+    class="container w-50 mt-2 p-5 bg-light"
+    action="/update/<%= book._id %>"
+    method="post" enctype="multipart/form-data"
+>
+    <h1>Book Store Update Entry</h1>
+    <div class="mb-3"><img width="200" src="/images/<%=book.image%>" alt=""></div>
+    <input type="hidden" name="oldimage" value="<%= book.image %>">
+    <input class="form-control mb-3" type="file" name="image">
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Name"
+        name="name"
+        value="<%= book.name%>"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Author Name"
+        name="author"
+        value="<%= book.author%>"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Price"
+        name="price"
+        value="<%= book.price%>"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Quantity"
+        name="quantity"
+        value="<%= book.quantity%>"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Category"
+        name="category"
+        value="<%= book.category%>"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Language"
+        name="language"
+        value="<%= book.language%>"
+    />
+
+    <textarea
+        class="form-control mb-3"
+        name="description"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="enter text here..."
+    >
+<%= book.description %></textarea
+    >
+
+    <button class="btn btn-primary">Update Book</button>
+</form>
+<!--  -->
+<%- include("./partials/footer")%>

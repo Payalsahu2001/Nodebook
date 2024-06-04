@@ -1,0 +1,65 @@
+<%- include("./partials/header")%>
+<!--  -->
+
+<form class="container w-50 mt-2 p-5 bg-light" action="/create" method="post" enctype="multipart/form-data">
+    <h1>Book Store Entry</h1>
+    <input
+        class="form-control mb-3"
+        type="file"
+        name="image"
+    />
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Name"
+        name="name"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Author Name"
+        name="author"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Price"
+        name="price"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Quantity"
+        name="quantity"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Category"
+        name="category"
+    />
+
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Book Language"
+        name="language"
+    />
+
+    <textarea
+        class="form-control mb-3"
+        name="description"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="enter text here..."
+    ></textarea>
+
+    <button class="btn btn-primary">Add Book</button>
+</form>
+<!--  -->
+<%- include("./partials/footer")%>
